@@ -1,60 +1,65 @@
-<#
-.SYNOPSIS
-    Deploy Survival Game WebGL build to GitHub Pages via docs/ folder.
+# deploy-webgl.ps1
+# ─────────────────────────────────────────────────────────────
+# Run this script AFTER doing a WebGL build in Unity.
+# It copies the build output into /docs and pushes to GitHub.
+#
+# Usage:
+#   .\deploy-webgl.ps1
+# Or with a custom build output path:
+#   .\deploy-webgl.ps1 -BuildPath "C:\MyBuilds\WebGL"
+# ─────────────────────────────────────────────────────────────
 
-.DESCRIPTION
-    After you build the WebGL output from Unity, run this script to copy
-    the build into docs/ and push to the main branch. GitHub Pages serves
-    from docs/ on main.
-
-.PARAMETER BuildPath
-    Path to the Unity WebGL build output folder (contains index.html, Build/, etc.).
-    Defaults to .\BUILD\WebGL
-#>
 param(
-    [string]$BuildPath = ".\BUILD\WebGL"
+    [string]$BuildPath = "$PSScriptRoot\LocalWebGLBuild"
 )
 
+$DocsPath = "$PSScriptRoot\docs"
 $ErrorActionPreference = "Stop"
-$RepoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-# ── 1. Validate build ───────────────────────────────────────────────
+Write-Host ""
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host "  Survival Game 3D — WebGL Deploy"    -ForegroundColor Cyan
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host ""
+
+# ── 1. Validate build output exists ──────────────────────────
 if (-not (Test-Path "$BuildPath\index.html")) {
-    Write-Error "❌  No index.html found in '$BuildPath'. Build the WebGL target in Unity first."
+    Write-Host "ERROR: No WebGL build found at: $BuildPath" -ForegroundColor Red
+    Write-Host ""
+    Write-Host "Please build for WebGL in Unity first:" -ForegroundColor Yellow
+    Write-Host "  File -> Build Settings -> WebGL -> Build"  -ForegroundColor Yellow
+    Write-Host "  Output folder: $BuildPath"                 -ForegroundColor Yellow
     exit 1
 }
-Write-Host "✅  Build found at: $BuildPath" -ForegroundColor Green
 
-# ── 2. Clean & copy to docs/ ────────────────────────────────────────
-$DocsDir = Join-Path $RepoRoot "docs"
-if (Test-Path $DocsDir) {
-    Write-Host "🧹  Cleaning old docs/ ..." -ForegroundColor Yellow
-    Remove-Item -Recurse -Force $DocsDir
+Write-Host "Found WebGL build at: $BuildPath" -ForegroundColor Green
+
+# ── 2. Clear old docs/ and copy new build ────────────────────
+Write-Host "Copying build to /docs ..." -ForegroundColor Yellow
+
+if (Test-Path $DocsPath) {
+    Remove-Item -Recurse -Force $DocsPath
 }
+New-Item -ItemType Directory -Path $DocsPath -Force | Out-Null
+Copy-Item -Recurse "$BuildPath\*" $DocsPath
 
-Write-Host "📦  Copying build to docs/ ..." -ForegroundColor Cyan
-Copy-Item -Recurse -Force $BuildPath $DocsDir
+Write-Host "Done copying." -ForegroundColor Green
 
-# Add .nojekyll so GitHub Pages doesn't ignore underscore-prefixed files
-New-Item -ItemType File -Path "$DocsDir\.nojekyll" -Force | Out-Null
+# ── 3. Commit and push ───────────────────────────────────────
+Write-Host ""
+Write-Host "Committing and pushing to GitHub ..." -ForegroundColor Yellow
 
-Write-Host "✅  docs/ ready" -ForegroundColor Green
+$timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
 
-# ── 3. Git commit & push ────────────────────────────────────────────
-Push-Location $RepoRoot
-try {
-    git add docs/
-    $status = git status --porcelain docs/
-    if ([string]::IsNullOrWhiteSpace($status)) {
-        Write-Host "ℹ️  No changes to deploy." -ForegroundColor Yellow
-        exit 0
-    }
+$branch = git rev-parse --abbrev-ref HEAD
+git add docs/
+git commit -m "deploy: WebGL build ($timestamp)"
+git push origin ${branch}:main
 
-    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
-    git commit -m "deploy: WebGL build $timestamp"
-    git push origin main
-    Write-Host "`n🚀  Deployed! Check https://hoagluan58.github.io/survival-game-mobile/" -ForegroundColor Green
-}
-finally {
-    Pop-Location
-}
+Write-Host ""
+Write-Host "========================================" -ForegroundColor Green
+Write-Host "  Deployed! Your game is live at:"      -ForegroundColor Green
+Write-Host ""
+Write-Host "  https://hoagluan58.github.io/survival-game-mobile/" -ForegroundColor White
+Write-Host "========================================" -ForegroundColor Green
+Write-Host ""
