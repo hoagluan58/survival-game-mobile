@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Game4
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 855407519c739324c87483534f636cb0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 3fef5e95ec47dd74e90b36df0f155105: 21300000
+    - 57497cc79d963b942b52502ec980397a: 21300000
+    - c78b6eb8c4638ff4b8304646625e1f56: 21300000
+    - bcc80ef919dbb454d9c255708460f459: 21300000
+    - 6d8294de334092744925caf9aeecc32f: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3fef5e95ec47dd74e90b36df0f155105, type: 3}
+  - {fileID: 21300000, guid: 57497cc79d963b942b52502ec980397a, type: 3}
+  - {fileID: 21300000, guid: c78b6eb8c4638ff4b8304646625e1f56, type: 3}
+  - {fileID: 21300000, guid: bcc80ef919dbb454d9c255708460f459, type: 3}
+  - {fileID: 21300000, guid: 6d8294de334092744925caf9aeecc32f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ICON_BALL_ON
+  - Green_Marble
+  - GUAGE_JULDARIGI_BAR 1
+  - Red_Marble 1
+  - GUAGE_JULDARIGI_BAR_BG 1
+  m_RenderDataMap: {}
+  m_Tag: Game4
+  m_IsVariant: 0

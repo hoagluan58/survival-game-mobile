@@ -1,0 +1,53 @@
+using NFramework;
+using SquidGame.Core;
+using SquidGame.SaveData;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace SquidGame.UI
+{
+    public class MinigameMenuUI : BaseUIView
+    {
+        [SerializeField] private Button _removeAdsBTN;
+        [SerializeField] private Button _restoreAdsBTN;
+        [SerializeField] private Button _shopBTN;
+        [SerializeField] private Button _settingsBTN;
+        [SerializeField] private TextMeshProUGUI _dayTrackTMP;
+        [SerializeField] private GameObject _settingsBoardPNL;
+        [SerializeField] private GameObject _dayTrackPNL;
+
+        public override void OnOpen()
+        {
+            base.OnOpen();
+            SetData();
+            _shopBTN.onClick.AddListener(OnShopButtonClicked);
+            _settingsBTN.onClick.AddListener(OnSettingsButtonClicked);
+        }
+
+        public override void OnClose()
+        {
+            base.OnClose();
+            _shopBTN.onClick.RemoveListener(OnShopButtonClicked);
+            _settingsBTN.onClick.RemoveListener(OnSettingsButtonClicked);
+        }
+
+        private void SetData()
+        {
+            _dayTrackTMP.text = $"DAY {UserData.I.Round}/8";
+        }
+
+        private void OnShopButtonClicked()
+        {
+            MyLib.SoundManager.I.PlaySoundFX(MyLib.CategorySound.Fx_Click);
+            NFramework.UIManager.I.Open(Define.UIName.SHOP_POPUP);
+        }
+
+        private void OnSettingsButtonClicked()
+        {
+            _settingsBoardPNL.SetActive(!_settingsBoardPNL.activeSelf);
+            _dayTrackPNL.SetActive(!_dayTrackPNL.activeSelf);
+            MyLib.SoundManager.I.PlaySoundFX(MyLib.CategorySound.Fx_Click);
+        }
+    }
+}

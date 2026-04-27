@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Examples/04 Directional Sprites/01 Directional Basics/Critters/Bunny-Walk.asset.meta
+guid: cf0284eff9a168e4bacc153a8315ec3e
+========
+guid: 8c620474cb1284d48aade72a7097e4ca
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/ScriptableObjects/PlayerSkinConfigSO.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

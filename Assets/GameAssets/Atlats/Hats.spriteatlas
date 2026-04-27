@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hats
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e75fe230b4ae84b4bad99acfe78b1dc9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - f9a94500d87c0384c94c58226a4cefeb: 21300000
+    - 7cf74b30e4342dd41b0757b917d0a582: 21300000
+    - 42680ae0f13690d4b8e5290b9915ebf2: 21300000
+    - fbec13424e072ab4e996e5686b37f926: 21300000
+    - b4ee44a2ade31e74b89ac60351b9167e: 21300000
+    - 7980254597fb3b74b8512e81c0ba1368: 21300000
+    - a4802c86387d8f4438c2f432a5c54c20: 21300000
+    - a561a50876f4f0c4ebb7cde9405e882e: 21300000
+    - 2b7905d8c93c6fc45b641c7451044dc6: 21300000
+    - cb57d9d8ef1da2f49ab8789dbcc90e5a: 21300000
+    - 9096ecd8f4799184194adb760f7e909f: 21300000
+    - 1d03fc0a719604e4a8295efd82823195: 21300000
+    - 88cbebaddd0d1d24887a3c35eab2a8bc: 21300000
+    - 7cd1485e1400afa408214762cf3c8f95: 21300000
+    - 2801129ed11686f45a6279e770b63d03: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f9a94500d87c0384c94c58226a4cefeb, type: 3}
+  - {fileID: 21300000, guid: 7cf74b30e4342dd41b0757b917d0a582, type: 3}
+  - {fileID: 21300000, guid: 42680ae0f13690d4b8e5290b9915ebf2, type: 3}
+  - {fileID: 21300000, guid: fbec13424e072ab4e996e5686b37f926, type: 3}
+  - {fileID: 21300000, guid: b4ee44a2ade31e74b89ac60351b9167e, type: 3}
+  - {fileID: 21300000, guid: 7980254597fb3b74b8512e81c0ba1368, type: 3}
+  - {fileID: 21300000, guid: a4802c86387d8f4438c2f432a5c54c20, type: 3}
+  - {fileID: 21300000, guid: a561a50876f4f0c4ebb7cde9405e882e, type: 3}
+  - {fileID: 21300000, guid: 2b7905d8c93c6fc45b641c7451044dc6, type: 3}
+  - {fileID: 21300000, guid: cb57d9d8ef1da2f49ab8789dbcc90e5a, type: 3}
+  - {fileID: 21300000, guid: 9096ecd8f4799184194adb760f7e909f, type: 3}
+  - {fileID: 21300000, guid: 1d03fc0a719604e4a8295efd82823195, type: 3}
+  - {fileID: 21300000, guid: 88cbebaddd0d1d24887a3c35eab2a8bc, type: 3}
+  - {fileID: 21300000, guid: 7cd1485e1400afa408214762cf3c8f95, type: 3}
+  - {fileID: 21300000, guid: 2801129ed11686f45a6279e770b63d03, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Hat 6
+  - Hat 1
+  - Hat 7
+  - Hat 2
+  - Hat 5
+  - Hat 8
+  - Hat 10
+  - Hat 9
+  - Hat 3
+  - Hat 15
+  - Hat 11
+  - Hat 12
+  - Hat 14
+  - Hat 13
+  - Hat 4
+  m_RenderDataMap: {}
+  m_Tag: Hats
+  m_IsVariant: 0

@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1153958976698375465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153958976698375470}
+  - component: {fileID: 1153958976698375471}
+  m_Layer: 0
+  m_Name: GameConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153958976698375470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153958976698375465}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153958976698375471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153958976698375465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590ab782ec01af4d96e2aed5385aa21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsNeedDestroy: 0
+  _playerSkinDefines:
+  - Name: Hat 1
+    ID: 0
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 7cf74b30e4342dd41b0757b917d0a582, type: 3}
+  - Name: Hat 2
+    ID: 1
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: fbec13424e072ab4e996e5686b37f926, type: 3}
+  - Name: Hat 3
+    ID: 2
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 2b7905d8c93c6fc45b641c7451044dc6, type: 3}
+  - Name: Hat 4
+    ID: 3
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 2801129ed11686f45a6279e770b63d03, type: 3}
+  - Name: Hat 5
+    ID: 4
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: b4ee44a2ade31e74b89ac60351b9167e, type: 3}
+  - Name: Hat 6
+    ID: 5
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: f9a94500d87c0384c94c58226a4cefeb, type: 3}
+  - Name: Hat 7
+    ID: 6
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 42680ae0f13690d4b8e5290b9915ebf2, type: 3}
+  - Name: Hat 8
+    ID: 7
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 7980254597fb3b74b8512e81c0ba1368, type: 3}
+  - Name: Hat 9
+    ID: 8
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: a561a50876f4f0c4ebb7cde9405e882e, type: 3}
+  - Name: Hat 10
+    ID: 9
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: a4802c86387d8f4438c2f432a5c54c20, type: 3}
+  - Name: Hat 11
+    ID: 10
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 9096ecd8f4799184194adb760f7e909f, type: 3}
+  - Name: Hat 12
+    ID: 11
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 1d03fc0a719604e4a8295efd82823195, type: 3}
+  - Name: Hat 13
+    ID: 12
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 7cd1485e1400afa408214762cf3c8f95, type: 3}
+  - Name: Hat 14
+    ID: 13
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: 88cbebaddd0d1d24887a3c35eab2a8bc, type: 3}
+  - Name: Hat 15
+    ID: 14
+    IsDefault: 0
+    Icon: {fileID: 21300000, guid: cb57d9d8ef1da2f49ab8789dbcc90e5a, type: 3}

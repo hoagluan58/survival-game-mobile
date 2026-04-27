@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Internal/Controller States/ControllerState.DampedFloatParameter.cs.meta
+guid: 14cc186fe06d0a14bb7860c922b9d81e
+timeCreated: 1515060256
+licenseType: Store
+========
+guid: fd759159d60256b49a2996e28b62f864
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/Scripts/Game/CameraController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

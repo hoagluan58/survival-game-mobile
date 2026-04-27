@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Internal/Collections/FastComparer.cs.meta
+guid: fbabbb938c3b8814ba83696eeec6a85f
+========
+guid: 1ed080349d9a4c04cb49e03854f59aae
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/Scripts/Game/PlayerSkin/PlayerSkinConfigSO.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

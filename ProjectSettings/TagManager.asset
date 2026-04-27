@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - win
+  - Dalgona_Out
+  - Dalgona_In
+  - Hole
+  - Dead_Zone
+  - Ground
+  - Player_Collect
+  - Check_Point
+  - Stone
+  - Wall
+  - Room
+  - Bot
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - PlayerSelect
+  - RaycastLayer
+  - Ragdoll
+  - Bot
+  - NonSelfColliding
+  - Character
+  - Obstacle
+  - Npc
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UICanvas
+    uniqueID: 4220387539
+    locked: 0
+  - name: 
+    uniqueID: 2892636261
+    locked: 0

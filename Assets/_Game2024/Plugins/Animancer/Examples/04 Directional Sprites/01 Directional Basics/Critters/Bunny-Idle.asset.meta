@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Examples/04 Directional Sprites/01 Directional Basics/Critters/Bunny-Idle.asset.meta
+guid: 7c9daa995c8082c4a986dc5f6a6ecb48
+========
+guid: 8c62ba4cdc11aec4488ee5528875de97
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/ScriptableObjects/MinigameConfigSO.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24c3fa4a9a9b474e9e6ae288a41c809, type: 3}
+  m_Name: AnimationConfigSO
+  m_EditorClassIdentifier: 
+  Configs:
+  - Style: 0
+    Clip: {fileID: 7400000, guid: 5e50e1534695ffe4181b2e1d9b2ab212, type: 2}
+    Face: 0
+  - Style: 1
+    Clip: {fileID: 7400000, guid: 14a39b8518c2c5748bf13982b43ac2d7, type: 2}
+    Face: 0
+  - Style: 2
+    Clip: {fileID: 7400000, guid: 2f26f7e806e91ee48b3a4c8831bff3a0, type: 2}
+    Face: 0
+  - Style: 3
+    Clip: {fileID: 7400000, guid: e4f4f060cdead064da9fb7239dd43e37, type: 2}
+    Face: 1
+  - Style: 4
+    Clip: {fileID: 7400000, guid: af7d60f78cb594840b8c346e7efda359, type: 2}
+    Face: 1
+  - Style: 5
+    Clip: {fileID: 7400000, guid: 6cf162ca56b74a243967094dc8211ad9, type: 2}
+    Face: 1
+  - Style: 6
+    Clip: {fileID: 7400000, guid: e778345dca5e19249a97ddcd8ade22d4, type: 2}
+    Face: 2
+  - Style: 7
+    Clip: {fileID: 7400000, guid: 304610aecb6d58f4ba60d6b2bc28e695, type: 2}
+    Face: 0
+  - Style: 8
+    Clip: {fileID: 7400000, guid: fc7125287d8a56244ab579a3427c1072, type: 2}
+    Face: 0
+  - Style: 9
+    Clip: {fileID: 7400000, guid: 1aedefbfa18f21b4fad6bc5a5d529c37, type: 2}
+    Face: 0
+  - Style: 10
+    Clip: {fileID: 7400000, guid: 65cc182a6ed601346a302274c6acb01b, type: 2}
+    Face: 0
+  - Style: 11
+    Clip: {fileID: 7400000, guid: da264f976bbf7024ba0130480c4bbb6e, type: 2}
+    Face: 0
+  - Style: 12
+    Clip: {fileID: 7400000, guid: 4e2f60b39cbfe2d4e86a45c5a01b88f1, type: 2}
+    Face: 0
+  - Style: 13
+    Clip: {fileID: 7400000, guid: 4d5d8f3b23dafeb4c9132a70528a13bc, type: 2}
+    Face: 0
+  - Style: 14
+    Clip: {fileID: 7400000, guid: a4c7dcc7de5c1cd40ac67e5b46c7c81b, type: 2}
+    Face: 0
+  - Style: 15
+    Clip: {fileID: -203655887218126122, guid: a80c742894b08c344a1b6466ebfa8dd1, type: 3}
+    Face: 0
+  - Style: 16
+    Clip: {fileID: -203655887218126122, guid: 15c4e58e3fc5ec64c9f6c24c0614d41d, type: 3}
+    Face: 2
+  - Style: 17
+    Clip: {fileID: -203655887218126122, guid: 6bb2ed126459e104cb717eaa9bc55ac4, type: 3}
+    Face: 0
+  - Style: 18
+    Clip: {fileID: -203655887218126122, guid: 708ef09e7ed71dc47b4ff083f90931ea, type: 3}
+    Face: 0
+  - Style: 19
+    Clip: {fileID: -203655887218126122, guid: 4ad97c6cfbef4234099d50d2b37d2d25, type: 3}
+    Face: 0
+  _animFolderPath: Assets/_Game2025/Art/Models/CH_01/Animations

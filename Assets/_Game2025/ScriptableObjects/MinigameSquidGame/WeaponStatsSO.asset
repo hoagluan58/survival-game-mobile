@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49561d8dc5abcb34e93158bf2d258a09, type: 3}
+  m_Name: WeaponStatsSO
+  m_EditorClassIdentifier: 
+  _datas:
+  - WeaponType: 1
+    Damage: 10
+    Range: 2.2
+    DelayTime: 0.35
+    ExistTime: 0.1
+  - WeaponType: 2
+    Damage: 8
+    Range: 1.25
+    DelayTime: 0.35
+    ExistTime: 0.1
+  - WeaponType: 3
+    Damage: 10
+    Range: 1.5
+    DelayTime: 0.4
+    ExistTime: 0.5
+  - WeaponType: 4
+    Damage: 12
+    Range: 2
+    DelayTime: 0.4
+    ExistTime: 0.2
+  _sheetId: 1CnMYHIzSWFdbAe_eOAcShJTFQYagZvU_52jCRPLJ8PA
+  _isSheetIdEncrypted: 0
+  _gridId: 144666432
+  _tsvCachePath: 
+  _jsonCachePath: 
+  _sheetIdRuntime: 
+  _gridIdRuntime: 

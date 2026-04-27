@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf73ef743279e848bd94f8f2b11dd17, type: 3}
+  m_Name: Minigame3SO
+  m_EditorClassIdentifier: 
+  _datas:
+  - Level: 1
+    GreenAreaPercentage: 1
+    MinValue: 160
+    MaxValue: 416
+    Speed: 1.5
+    PercentageSpeedEachBreak: 1
+  - Level: 2
+    GreenAreaPercentage: 0.8
+    MinValue: 184
+    MaxValue: 390
+    Speed: 1.5
+    PercentageSpeedEachBreak: 1
+  - Level: 3
+    GreenAreaPercentage: 0.8
+    MinValue: 184
+    MaxValue: 390
+    Speed: 1.4285715
+    PercentageSpeedEachBreak: 0.95
+  - Level: 4
+    GreenAreaPercentage: 0.7
+    MinValue: 198
+    MaxValue: 379
+    Speed: 1.3888888
+    PercentageSpeedEachBreak: 0.92
+  _sheetId: 1CnMYHIzSWFdbAe_eOAcShJTFQYagZvU_52jCRPLJ8PA
+  _isSheetIdEncrypted: 0
+  _gridId: 456628718
+  _tsvCachePath: 
+  _jsonCachePath: 
+  _sheetIdRuntime: 
+  _gridIdRuntime: 

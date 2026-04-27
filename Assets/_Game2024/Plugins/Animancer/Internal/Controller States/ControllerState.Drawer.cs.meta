@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Internal/Controller States/ControllerState.Drawer.cs.meta
+guid: 5402d564e4446d54485890b23d55aed0
+timeCreated: 1515060256
+licenseType: Store
+========
+guid: 5554acca37c82fb4a9d7c518e93723e9
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/Scripts/Game/GameManager.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

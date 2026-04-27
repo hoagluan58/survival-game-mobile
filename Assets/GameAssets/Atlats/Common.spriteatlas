@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Common
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 51
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9b7f4a15c56ed42419268cfaec3f9684, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - eaab2590ea9675c47bb5b6b031927c25: 21300000
+    - 544dbf535a2580147aff0f7f4b67018c: 21300000
+    - a65ff735fdf371a41985f90bf229d5ae: 21300000
+    - 5b3fc1e502db51a469f20a7cefaf4c83: 21300000
+    - c72acb775b7b364439a987765f43065d: -2413806693520163455
+    - 43d54e2ab0b13f94c855e23c6f6022fe: 21300000
+    - 8311846b4b143d44a805e179e1cd6c1f: 21300000
+    - cf5ba49d8520bcc4b8561ac5ae1a0730: 21300000
+    - 4e783cad3f0cc234eb9d3a44dfa3dfdb: 21300000
+    - 57f91b9f7acb3834e843ba9d1e4f261b: 7482667652216324306
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: eaab2590ea9675c47bb5b6b031927c25, type: 3}
+  - {fileID: 21300000, guid: 544dbf535a2580147aff0f7f4b67018c, type: 3}
+  - {fileID: 21300000, guid: a65ff735fdf371a41985f90bf229d5ae, type: 3}
+  - {fileID: 21300000, guid: 5b3fc1e502db51a469f20a7cefaf4c83, type: 3}
+  - {fileID: -2413806693520163455, guid: c72acb775b7b364439a987765f43065d, type: 3}
+  - {fileID: 21300000, guid: 43d54e2ab0b13f94c855e23c6f6022fe, type: 3}
+  - {fileID: 21300000, guid: 8311846b4b143d44a805e179e1cd6c1f, type: 3}
+  - {fileID: 21300000, guid: cf5ba49d8520bcc4b8561ac5ae1a0730, type: 3}
+  - {fileID: 21300000, guid: 4e783cad3f0cc234eb9d3a44dfa3dfdb, type: 3}
+  - {fileID: 7482667652216324306, guid: 57f91b9f7acb3834e843ba9d1e4f261b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Button
+  - Button_Gray
+  - Panel_Black
+  - Button_Blue
+  - Circle
+  - Coin
+  - Button_Yellow
+  - Icon_Video
+  - Icon_MoneyLv1
+  - Square
+  m_RenderDataMap: {}
+  m_Tag: Common
+  m_IsVariant: 0

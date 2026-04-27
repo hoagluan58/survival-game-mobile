@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Animancer.asset.meta
+guid: 6427920d39b8aa94eb2c4522a42c1a72
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+========
+guid: cdb2109676504554cbec4ca49baa7cdb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 24100000
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/Audio/AudioMixer.mixer.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

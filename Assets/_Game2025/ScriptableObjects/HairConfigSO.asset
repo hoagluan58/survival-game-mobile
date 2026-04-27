@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba97ebf6c32f9e49b83fc325d58404e, type: 3}
+  m_Name: HairConfigSO
+  m_EditorClassIdentifier: 
+  _datas:
+  - Id: 1
+    Model: {fileID: 919132149155446097, guid: 4212fa3ff11a7a14b9a895e3e8ab7e2c, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: f3bebb7ea8347d54c915f02da8ed2a8d, type: 2}
+    Name: Girl_Hair_01
+  - Id: 2
+    Model: {fileID: 919132149155446097, guid: ce342e1159411a047ab3c77bba86cca1, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: 602f77ab76f5fda4db7d721da3d01130, type: 2}
+    Name: Girl_Hair_02
+  - Id: 3
+    Model: {fileID: 919132149155446097, guid: 69f6e1d3b1b8fb54bb1439fc870b0cd4, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: e86c8eda0e3572b46880e2468d282b91, type: 2}
+    Name: Girl_Hair_03
+  - Id: 4
+    Model: {fileID: 919132149155446097, guid: 8384fc274dd60c441a317b4407d2cfa5, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: 48b0fd0c5f941ab419db9ffae44eed95, type: 2}
+    Name: Girl_Hair_04
+  - Id: 5
+    Model: {fileID: 919132149155446097, guid: 07f422c3967bb0a4aa368abf39ead4eb, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: ec45c2f504a90c04aba9e0d69a32caff, type: 2}
+    Name: Girl_Hair_05
+  - Id: 6
+    Model: {fileID: 919132149155446097, guid: 7249c4f2f947e4842a83904bbe03db95, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: bc1390774cf37b34a83b7a806801d91a, type: 2}
+    Name: Boy_Hair_01
+  - Id: 7
+    Model: {fileID: 919132149155446097, guid: d4025bbfc0fb7eb45ad838fb878f5906, type: 3}
+    IsDefault: 1
+    ShopRenderTexture: {fileID: 8400000, guid: 8460b26c527b40d458e2a8b9fea0f0e8, type: 2}
+    Name: Boy_Hair_02
+  - Id: 8
+    Model: {fileID: 919132149155446097, guid: e3e70792786877b41a0434303698349b, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: fa0e34f3c3b1ebf4d8cc45aea296e68a, type: 2}
+    Name: Boy_Hair_03
+  - Id: 9
+    Model: {fileID: 919132149155446097, guid: 3d18b52e5798c8b4aae9665f8588136f, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: e5ed574aa40753047aec91b99bfa5ad3, type: 2}
+    Name: Boy_Hair_04
+  - Id: 10
+    Model: {fileID: 919132149155446097, guid: d00ef814b2d934040b356d61519a7512, type: 3}
+    IsDefault: 0
+    ShopRenderTexture: {fileID: 8400000, guid: 29dd05ba3cf361c4da1c5f2d597682b3, type: 2}
+    Name: Boy_Hair_05
+  _sheetId: 1m0l9OtxQWdZN5Oe4-4xTRJIw_xRY75Tx
+  _isSheetIdEncrypted: 0
+  _gridId: 919147746
+  _tsvCachePath: 
+  _jsonCachePath: 
+  _sheetIdRuntime: 
+  _gridIdRuntime: 
+  _renderTexturePath: Assets/_Game2025/Preferences/ShopTextures

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Game2024/Plugins/Animancer/Examples/Code/AssemblyInfo.cs.meta
+guid: b485bdd20d868b849bfacc8df39c5249
+========
+guid: 0f16f6ad763b51b47a085bceb00395af
+>>>>>>>> d25dac0e (feat: refactor code):Assets/_Game2024/Scripts/Game/MinigameConfigSO.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
