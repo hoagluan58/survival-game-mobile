@@ -26,6 +26,9 @@ namespace SquidGame.LandScape
         float _joystickAngle, _rotationAngle;
         bool _canUseJoystick = true, canTakeDamage = true;
 
+        // WebGL / desktop WASD support
+        Vector2 _wasdInput;
+
         Transform _cameraTransform;
         VariableJoystick _joystick;
 
@@ -37,8 +40,21 @@ namespace SquidGame.LandScape
         public WinState WinState;
         public JumpState JumpState;
 
-        public Vector2 GetJoystickDirection() => _joystick.Direction;
+        /// <summary>
+        /// Returns the effective move direction.
+        /// On desktop/WebGL the WASD keys override the joystick when the joystick is idle.
+        /// </summary>
+        public Vector2 GetJoystickDirection()
+        {
+#if UNITY_EDITOR || UNITY_WEBGL
+            _wasdInput = GetWASDInput();
+            if (_wasdInput.magnitude > 0.01f)
+                return _wasdInput;
+#endif
+            return _joystick != null ? _joystick.Direction : Vector2.zero;
+        }
         public bool IsGrounded() => _controller.isGrounded;
+
 
         public Transform GetTransform() => transform;
 
@@ -98,7 +114,8 @@ namespace SquidGame.LandScape
 
         void HandleInput()
         {
-            _joystickDirection = _joystick.Direction;
+            Vector2 effectiveDir = GetJoystickDirection();
+            _joystickDirection = effectiveDir;
             _joystickAngle = Mathf.Atan2(_joystickDirection.x, _joystickDirection.y) * Mathf.Rad2Deg;
             _forwardDirection = Quaternion.Euler(0, _joystickAngle, 0) * _cameraTransform.forward;
             _forwardDirection.y = 0;
@@ -106,6 +123,17 @@ namespace SquidGame.LandScape
 
             _rotationAngle = Quaternion.LookRotation(_forwardDirection).eulerAngles.y;
             transform.eulerAngles = new Vector3(0, _rotationAngle, 0);
+        }
+
+        /// <summary>Returns a normalised WASD direction (raw axes so it works on WebGL).</summary>
+        private static Vector2 GetWASDInput()
+        {
+            float h = 0f, v = 0f;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))  h -= 1f;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) h += 1f;
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))  v -= 1f;
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))    v += 1f;
+            return new Vector2(h, v).normalized;
         }
 
         void HandleMovement()

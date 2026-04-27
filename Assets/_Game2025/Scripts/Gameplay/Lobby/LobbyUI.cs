@@ -19,6 +19,25 @@ namespace SquidGame.LandScape.Lobby
 
         public VariableJoystick Joystick => _joystick;
 
+        /// <summary>
+        /// Returns the effective move direction for Editor and WebGL (WASD / arrows),
+        /// falling back to the on-screen joystick on mobile.
+        /// </summary>
+        public Vector2 GetDirection()
+        {
+#if UNITY_EDITOR || UNITY_WEBGL
+            float h = 0f, v = 0f;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))  h -= 1f;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) h += 1f;
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))  v -= 1f;
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))    v += 1f;
+            var wasd = new Vector2(h, v).normalized;
+            if (wasd.magnitude > 0.01f)
+                return wasd;
+#endif
+            return _joystick.Direction;
+        }
+
         private void OnEnable()
         {
             _joystick.OnPointerUp(null);
@@ -42,7 +61,7 @@ namespace SquidGame.LandScape.Lobby
         public void Init(PlayerController playerController, CinemachineFreeLook cinemachineFreeLook)
         {
             _jumpButton.onClick.AddListener(playerController.Jump);
-            playerController.Init(Joystick);
+            playerController.Init(this);   // pass LobbyUI so controller uses GetDirection()
             _freeLookController.Init(cinemachineFreeLook);
 
             _controllerObject.SetActive(true);

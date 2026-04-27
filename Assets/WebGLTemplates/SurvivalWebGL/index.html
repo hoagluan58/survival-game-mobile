@@ -121,7 +121,7 @@
 </head>
 <body>
     <div id="unity-container">
-        <canvas id="unity-canvas" tabindex="-1"></canvas>
+        <canvas id="unity-canvas" tabindex="0"></canvas>
     </div>
     
     <div id="loading-overlay">
@@ -185,6 +185,10 @@
                 progressText.textContent = "Loading... " + pct + "%";
             }).then(function (instance) {
                 loadingOverlay.classList.add("hidden");
+                // Give the canvas keyboard focus so WASD / arrow keys work immediately
+                canvas.focus();
+                // Re-focus whenever the user clicks anywhere on the page
+                document.addEventListener("click", function() { canvas.focus(); });
             }).catch(function (message) {
                 errorMessage.textContent = message;
                 errorDialog.style.display = "block";

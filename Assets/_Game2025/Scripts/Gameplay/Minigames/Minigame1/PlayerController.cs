@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using NFramework;
 using SquidGame.LandScape.Core;
 using SquidGame.LandScape.Game;
@@ -124,7 +124,7 @@ namespace SquidGame.LandScape.Minigame1
         private HunterController _hunter;
         private MinigameController _controller;
 
-        private VariableJoystick _joystick;
+        private VariableJoystick _joystick; // kept for legacy; use _ui.Input.GetDirection() for movement
         private Vector3 _joystickDirection;
         private Vector3 _velocity;
         private Vector3 _move;
@@ -150,7 +150,7 @@ namespace SquidGame.LandScape.Minigame1
         public void Init(MinigameController controller, Minigame01MenuUI ui)
         {
             _ui = ui;
-            _joystick = _ui.Input.GetJoystick();
+            _joystick = _ui.Input.GetJoystick(); // legacy reference kept
             _controller = controller;
             _hunter = _controller.HunterController;
             _characterAnimator.PlayAnimation(EAnimStyle.Idle);
@@ -276,7 +276,8 @@ namespace SquidGame.LandScape.Minigame1
 
             if (!IsPlaying) return;
 
-            _joystickDirection = _joystick.Direction;
+            // Use GetDirection() so WASD keys work on WebGL in addition to the joystick
+            _joystickDirection = _ui.Input.GetDirection();
             if (_joystickDirection.magnitude > 0.1f)
             {
                 HandleMoveUpdate();

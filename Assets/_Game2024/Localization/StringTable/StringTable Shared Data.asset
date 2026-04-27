@@ -1,0 +1,389 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: e7535bf4adc922143a7d642dbd1fa84a
+  m_Entries:
+  - m_Id: 20479044202496
+    m_Key: STRING_LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20723156889600
+    m_Key: STRING_SELECT_MODE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70630119026688
+    m_Key: STRING_TRAINING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70630131609600
+    m_Key: STRING_CHALLENGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151104
+    m_Key: STRING_SHOP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74685675450368
+    m_Key: STRING_DAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108605074812928
+    m_Key: STRING_SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108660003418112
+    m_Key: STRING_SOUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108728555122688
+    m_Key: STRING_MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108758485676032
+    m_Key: STRING_VIBRATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151105
+    m_Key: STRING_YOU_PASSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151106
+    m_Key: STRING_YOU_FAILED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151107
+    m_Key: STRING_RETRY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10895250996834304
+    m_Key: STRING_BACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151108
+    m_Key: STRING_NEXT_DAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151109
+    m_Key: STRING_FREE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151110
+    m_Key: STRING_REVIVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151111
+    m_Key: STRING_EQUIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151112
+    m_Key: STRING_EQUIPPED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151113
+    m_Key: STRING_HOLD_AND_DRAG_TO_MOVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151114
+    m_Key: STRING_TAP_TO_JUMP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151115
+    m_Key: STRING_TAP_TO_START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151116
+    m_Key: STRING_TAP_TO_PLAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 416228856803328
+    m_Key: STRING_TAP_TO_STOP_THE_ARROW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467985788022784
+    m_Key: STRING_TAP_TO_GET_DIRECTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467985796411392
+    m_Key: STRING_TAP_TO_THROW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151117
+    m_Key: STRING_CHOOSE_A_CASE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151118
+    m_Key: STRING_HOLD_TO_MOVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151119
+    m_Key: STRING_HOLD_TO_THROW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367282914570240
+    m_Key: STRING_HOLD_TO_ADJUST_POWER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151120
+    m_Key: STRING_TAP_FAST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151121
+    m_Key: STRING_SWIPE_DOWN_AND_TAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367282960707584
+    m_Key: STRING_RELEASE_TO_THROW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5869380619972608
+    m_Key: STRING_SWIPE_TO_THROW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5869380636749824
+    m_Key: STRING_HIT_THE_ENEMIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061839151122
+    m_Key: STRING_YOU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 416228856803329
+    m_Key: STRING_YOUR_TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345408
+    m_Key: STRING_PLAYER_TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467985796411393
+    m_Key: STRING_OPPONENT_TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345409
+    m_Key: STRING_DRAW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345410
+    m_Key: STRING_YOU_WIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345411
+    m_Key: STRING_YOU_LOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345412
+    m_Key: STRING_SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345413
+    m_Key: STRING_FOCUS_ON_THOSE_LIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345414
+    m_Key: STRING_NOW_REPEAT_IT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114061843345415
+    m_Key: STRING_FIND_SIMILAR_PAIRS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375071816790016
+    m_Key: STRING_TAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456597472522240
+    m_Key: STRING_RETURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456597606739968
+    m_Key: STRING_CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486583070720
+    m_Key: STRING_HOT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486675345408
+    m_Key: STRING_NEW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2190015772209152
+    m_Key: STRING_ADS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486675345409
+    m_Key: STRING_MINIGAME_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486683734016
+    m_Key: STRING_MINIGAME_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486683734017
+    m_Key: STRING_MINIGAME_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486683734018
+    m_Key: STRING_MINIGAME_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486687928320
+    m_Key: STRING_MINIGAME_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486687928321
+    m_Key: STRING_MINIGAME_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486692122624
+    m_Key: STRING_MINIGAME_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486692122625
+    m_Key: STRING_MINIGAME_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486692122626
+    m_Key: STRING_MINIGAME_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486696316928
+    m_Key: STRING_MINIGAME_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486696316929
+    m_Key: STRING_MINIGAME_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486696316930
+    m_Key: STRING_MINIGAME_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486700511232
+    m_Key: STRING_MINIGAME_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486700511233
+    m_Key: STRING_MINIGAME_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486704705536
+    m_Key: STRING_MINIGAME_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486704705537
+    m_Key: STRING_MINIGAME_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164486704705538
+    m_Key: STRING_MINIGAME_18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310305738752
+    m_Key: STRING_MINIGAME_21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5429116386390016
+    m_Key: STRING_NO_INTERNET_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5429116403167232
+    m_Key: STRING_SUBMIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5429116403167233
+    m_Key: STRING_RATE_US_CONTENT_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5429116403167234
+    m_Key: STRING_RATE_US_CONTENT_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13140174358163456
+    m_Key: STRING_DAILY_REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13140174530129920
+    m_Key: STRING_CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13140174530129921
+    m_Key: STRING_CLAIM_X
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13140174530129922
+    m_Key: STRING_DAILY_REMINDED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18219335858761728
+    m_Key: STRING_TOTAL_REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18219335951036416
+    m_Key: STRING_WARNING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18219335951036417
+    m_Key: STRING_WARNING_CONTENT_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18219335951036418
+    m_Key: STRING_QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18219335951036419
+    m_Key: STRING_CONTINUE_PLAYING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098880
+    m_Key: STRING_GROUP_OF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098881
+    m_Key: STRING_ROUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098882
+    m_Key: STRING_NEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098883
+    m_Key: STRING_DONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098884
+    m_Key: STRING_MG21_TUT_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098885
+    m_Key: STRING_MG21_TUT_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18558310335098886
+    m_Key: STRING_MG21_TUT_2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7216941847796252697
+  references:
+    version: 2
+    RefIds:
+    - rid: 7216941847796252697
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1734492367366
