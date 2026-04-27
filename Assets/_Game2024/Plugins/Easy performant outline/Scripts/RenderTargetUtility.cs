@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
@@ -8,10 +8,19 @@ namespace EPOOutline
     public static class XRUtility
     {
         public static bool IsXRActive =>
+#if ENABLE_VR || UNITY_XR_MANAGEMENT
             UnityEngine.XR.XRSettings.enabled &&
             UnityEngine.XR.XRSettings.isDeviceActive;
+#else
+            false;
+#endif
 
-        public static RenderTextureDescriptor VRRenderTextureDescriptor => UnityEngine.XR.XRSettings.eyeTextureDesc;
+        public static RenderTextureDescriptor VRRenderTextureDescriptor => 
+#if ENABLE_VR || UNITY_XR_MANAGEMENT
+            UnityEngine.XR.XRSettings.eyeTextureDesc;
+#else
+            new RenderTextureDescriptor(Screen.width, Screen.height);
+#endif
 
         public static bool IsUsingVR(OutlineParameters parameters)
         {
@@ -65,7 +74,11 @@ namespace EPOOutline
 
             if (XRUtility.IsUsingVR(parameters))
             {
+#if ENABLE_VR || UNITY_XR_MANAGEMENT
                 var descriptor = UnityEngine.XR.XRSettings.eyeTextureDesc;
+#else
+                var descriptor = new RenderTextureDescriptor(width, height);
+#endif
                 descriptor.colorFormat = rtFormat;
                 descriptor.width = width;
                 descriptor.height = height;

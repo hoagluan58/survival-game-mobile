@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -226,7 +226,11 @@ namespace EPOOutline
             if (targetCamera == null)
                 targetCamera = GetComponent<Camera>();
 
+#if ENABLE_VR || UNITY_XR_MANAGEMENT
             targetCamera.forceIntoRenderTexture = targetCamera.stereoTargetEye == StereoTargetEyeMask.None || !UnityEngine.XR.XRSettings.enabled;
+#else
+            targetCamera.forceIntoRenderTexture = true;
+#endif
 
 #if UNITY_EDITOR
             outliners.Add(this);
