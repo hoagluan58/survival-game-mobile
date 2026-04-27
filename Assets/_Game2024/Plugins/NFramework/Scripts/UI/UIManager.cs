@@ -412,7 +412,8 @@ namespace NFramework
             UnityEditor.EditorUtility.DisplayDialog(title, message, ok);
             callback?.Invoke();
 #else
-            pingak9.NativeDialog.OpenDialog(title, message, ok, callback);
+            Debug.LogWarning($"System Popup Info: {title} - {message}");
+            callback?.Invoke();
 #endif
         }
 
@@ -424,7 +425,8 @@ namespace NFramework
             else
                 callback?.Invoke(false);
 #else
-                pingak9.NativeDialog.OpenDialog(title, message, yes, no, () => { callback?.Invoke(true); }, () => { callback?.Invoke(false); });
+            Debug.LogWarning($"System Popup Confirm: {title} - {message}");
+            callback?.Invoke(true);
 #endif
         }
 

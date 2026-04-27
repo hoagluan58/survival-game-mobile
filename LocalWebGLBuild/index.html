@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Survival Master 456 Game</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a0a; }
+        
+        #unity-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #unity-canvas {
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: block;
+        }
+        
+        /* Loading overlay */
+        #loading-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            z-index: 100;
+            transition: opacity 0.6s ease;
+        }
+        
+        #loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .game-title {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 30px rgba(233, 69, 96, 0.5);
+        }
+        
+        .progress-container {
+            width: 320px;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 12px rgba(233, 69, 96, 0.6);
+        }
+        
+        .progress-text {
+            font-family: 'Segoe UI', monospace;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 14px;
+            letter-spacing: 1px;
+        }
+        
+        /* Error dialog */
+        #error-dialog {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1e1e2e;
+            border: 1px solid #e94560;
+            border-radius: 12px;
+            padding: 30px;
+            z-index: 200;
+            max-width: 420px;
+            text-align: center;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        #error-dialog h2 { color: #e94560; margin-bottom: 12px; }
+        #error-dialog p { color: rgba(255,255,255,0.7); line-height: 1.5; }
+        
+        /* Fullscreen button */
+        #fullscreen-btn {
+            position: fixed;
+            bottom: 12px;
+            right: 12px;
+            z-index: 50;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        
+        #fullscreen-btn:hover { background: rgba(255,255,255,0.2); }
+        #fullscreen-btn svg { fill: rgba(255,255,255,0.7); width: 18px; height: 18px; }
+    </style>
+</head>
+<body>
+    <div id="unity-container">
+        <canvas id="unity-canvas" tabindex="-1"></canvas>
+    </div>
+    
+    <div id="loading-overlay">
+        <div class="game-title">Survival Master 456 Game</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-text" id="progress-text">Loading... 0%</div>
+    </div>
+    
+    <div id="error-dialog">
+        <h2>⚠ Error</h2>
+        <p id="error-message">Something went wrong.</p>
+    </div>
+    
+    <button id="fullscreen-btn" title="Toggle Fullscreen">
+        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+    </button>
+    
+    <script>
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/LocalWebGLBuild.loader.js";
+        var config = {
+            dataUrl: buildUrl + "/LocalWebGLBuild.data.unityweb",
+            frameworkUrl: buildUrl + "/LocalWebGLBuild.framework.js.unityweb",
+            codeUrl: buildUrl + "/LocalWebGLBuild.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "We",
+            productName: "Survival Master 456 Game",
+            productVersion: "0.3",
+        };
+
+        var progressBar = document.getElementById("progress-bar");
+        var progressText = document.getElementById("progress-text");
+        var loadingOverlay = document.getElementById("loading-overlay");
+        var errorDialog = document.getElementById("error-dialog");
+        var errorMessage = document.getElementById("error-message");
+        var canvas = document.getElementById("unity-canvas");
+
+        // Fullscreen toggle
+        document.getElementById("fullscreen-btn").addEventListener("click", function () {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = function () {
+            createUnityInstance(canvas, config, function (progress) {
+                var pct = Math.round(progress * 100);
+                progressBar.style.width = pct + "%";
+                progressText.textContent = "Loading... " + pct + "%";
+            }).then(function (instance) {
+                loadingOverlay.classList.add("hidden");
+            }).catch(function (message) {
+                errorMessage.textContent = message;
+                errorDialog.style.display = "block";
+                console.error("Unity load error:", message);
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
