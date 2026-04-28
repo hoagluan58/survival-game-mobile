@@ -89,9 +89,23 @@ namespace SquidGame.LandScape.Minigame2
             _isInit = true;
         }
 
+        private Vector2 GetDirection()
+        {
+#if UNITY_EDITOR || UNITY_WEBGL
+            float h = 0f, v = 0f;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))  h -= 1f;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) h += 1f;
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))  v -= 1f;
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))    v += 1f;
+            var wasd = new Vector2(h, v).normalized;
+            if (wasd.magnitude > 0.01f) return wasd;
+#endif
+            return _joystick.Direction;
+        }
+
         private void HandleUserInput()
         {
-            _joystickDirection = _joystick.Direction;
+            _joystickDirection = GetDirection();
             if (_joystickDirection.magnitude > 0.1f)
             {
                 _joystickAngle = Mathf.Atan2(_joystickDirection.x, _joystickDirection.y) * Mathf.Rad2Deg;
