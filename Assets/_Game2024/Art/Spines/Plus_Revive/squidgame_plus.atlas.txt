@@ -1,0 +1,6 @@
+squidgame_plus.png
+size:134,134
+filter:Linear,Linear
+pma:true
+plus
+bounds:2,2,130,130

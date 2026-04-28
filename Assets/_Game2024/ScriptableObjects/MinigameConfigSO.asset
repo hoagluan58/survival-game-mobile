@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8545b522635585b4391e3132c7918e98, type: 3}
+  m_Name: MinigameConfigSO
+  m_EditorClassIdentifier: 
+  _datas:
+  - Id: 1
+    SceneName: Minigame1
+    CanRevive: 1
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: d972e2d33a9f52b418b6e3726cc8392c, type: 3}
+    IsHot: 1
+    IsNew: 0
+    IsAds: 0
+  - Id: 2
+    SceneName: Minigame2
+    CanRevive: 1
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 1ce1ee039d677744286354e8556bd735, type: 3}
+    IsHot: 1
+    IsNew: 0
+    IsAds: 1
+  - Id: 3
+    SceneName: Minigame3
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 0bd5d1e07db83f24fa2c9a6e0e9a190b, type: 3}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 0
+  - Id: 4
+    SceneName: Minigame4
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: b9be8417cfcf34144878a54f201343e7, type: 3}
+    IsHot: 1
+    IsNew: 0
+    IsAds: 0
+  - Id: 5
+    SceneName: Minigame5
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 2987406804ca9b441ba2bbce0fd6582c, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 6
+    SceneName: Minigame6
+    CanRevive: 1
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: e1138cb82f09e2944a0f4a5c7a40411c, type: 3}
+    IsHot: 1
+    IsNew: 0
+    IsAds: 0
+  - Id: 7
+    SceneName: Minigame7
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 4f93407deaccac54198122fc96464ac5, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 8
+    SceneName: Minigame8
+    CanRevive: 1
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 13abb7c043c9edd429d78b041f8f9b11, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 9
+    SceneName: Minigame9
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 7c0d00987d1dec74b8bc507af26d792e, type: 3}
+    IsHot: 1
+    IsNew: 0
+    IsAds: 1
+  - Id: 10
+    SceneName: Minigame10
+    CanRevive: 1
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 7c5e5c9d76dc4ba4b9b25cc46f2bab75, type: 3}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 1
+  - Id: 11
+    SceneName: Minigame11
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: 07cc3cfad4a077b49b6519a7ecd305c4, type: 3}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 0
+  - Id: 13
+    SceneName: Minigame13
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: a8068c27213080a4fbe7e32158c5a225, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 14
+    SceneName: Minigame14
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 7fbc925e221d18c4db450dddcd0cd10d, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 15
+    SceneName: Minigame15
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 91dd8061cf41f3344b4945f6e445cff4, type: 3}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 0
+  - Id: 16
+    SceneName: Minigame16
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 5991251856465094a8a2310a23e66744, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 17
+    SceneName: Minigame17
+    CanRevive: 0
+    IsBooster: 1
+    Thumbnail: {fileID: 21300000, guid: f4298ac0a31524646bc18187d23df32f, type: 3}
+    IsHot: 0
+    IsNew: 0
+    IsAds: 0
+  - Id: 18
+    SceneName: Minigame18
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 21300000, guid: 82c84f4ee88bce54f8c4466630ec9c9a, type: 3}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 1
+  - Id: 21
+    SceneName: Minigame21
+    CanRevive: 0
+    IsBooster: 0
+    Thumbnail: {fileID: 0}
+    IsHot: 0
+    IsNew: 1
+    IsAds: 0
+  _sheetId: 1Y1GsorEGnAWEWgMQXvy8PT6gd7W7ClBcev8FpESSdQw
+  _isSheetIdEncrypted: 0
+  _gridId: 0
+  _tsvCachePath: 
+  _jsonCachePath: 
+  _sheetIdRuntime: 
+  _gridIdRuntime: 

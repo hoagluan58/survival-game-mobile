@@ -1,26 +1,13 @@
-# Unity generated
-Library/
-Logs/
-Temp/
-obj/
-BUILD/
-Recordings/
-CacheData/
-UserSettings/
-
-# IDE
-.idea/
-.vscode/
-.vs/
+.idea
+.vscode
+Library
+Logs
+Temp
 *.csproj
 *.sln
-
-# OS
+obj
+BUILD
+Recordings
 .DS_Store
-Thumbs.db
-
-# Build artifacts
-apk/
-
-# Keep docs/ (WebGL deploy target)
-# !docs/
+.vs/
+apk
