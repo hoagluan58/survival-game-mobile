@@ -6,7 +6,8 @@ Temp
 *.csproj
 *.sln
 obj
-BUILD
+/BUILD
+/LocalWebGLBuild
 Recordings
 .DS_Store
 .vs/
