@@ -17,7 +17,7 @@ namespace SquidGame.LandScape.Lobby
         [SerializeField] private float _jumpHeight = 5f;
         [SerializeField] private float _gravity = -9.8f;
 
-        VariableJoystick _joystick;
+        LobbyUI _lobbyUI;
         Vector3 _joystickDirection, _forwardDirection, _velocity, _move;
         float _joystickAngle, _rotationAngle;
         bool _isActive, _isJumping;
@@ -36,9 +36,9 @@ namespace SquidGame.LandScape.Lobby
             _isJumping = false;
         }
 
-        public void Init(VariableJoystick joystick)
+        public void Init(LobbyUI lobbyUI)
         {
-            _joystick = joystick;
+            _lobbyUI = lobbyUI;
             // _isActive = true;
         }
 
@@ -61,7 +61,7 @@ namespace SquidGame.LandScape.Lobby
 
         private void HandleUserInput()
         {
-            _joystickDirection = _joystick.Direction;
+            _joystickDirection = _lobbyUI.GetDirection();
             if (_joystickDirection.magnitude > 0.1f)
             {
                 _joystickAngle = Mathf.Atan2(_joystickDirection.x, _joystickDirection.y) * Mathf.Rad2Deg;
@@ -90,7 +90,6 @@ namespace SquidGame.LandScape.Lobby
             if (!_isJumping)
             {
                 _animator.PlayAnimation(_joystickDirection.magnitude > 0.1f ? EAnimStyle.Running : EAnimStyle.Idle, 0.2f);
-
             }
             else
             {

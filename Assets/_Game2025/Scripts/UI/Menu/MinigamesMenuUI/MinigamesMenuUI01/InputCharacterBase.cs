@@ -42,6 +42,30 @@ namespace SquidGame.LandScape.Minigame1
             return _joystick;
         }
 
+        /// <summary>
+        /// Returns the effective move direction.
+        /// On WebGL / desktop WASD keys are used when the joystick is idle.
+        /// Arrow keys are also supported.
+        /// </summary>
+        public Vector2 GetDirection()
+        {
+#if UNITY_EDITOR || UNITY_WEBGL
+            var wasd = GetWASDInput();
+            if (wasd.magnitude > 0.01f)
+                return wasd;
+#endif
+            return _joystick.Direction;
+        }
 
+        /// <summary>Returns a normalised WASD / arrow-key direction.</summary>
+        private static Vector2 GetWASDInput()
+        {
+            float h = 0f, v = 0f;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))  h -= 1f;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) h += 1f;
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))  v -= 1f;
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))    v += 1f;
+            return new Vector2(h, v).normalized;
+        }
     }
 }

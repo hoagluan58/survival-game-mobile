@@ -11,6 +11,10 @@ namespace SquidGame.LandScape
         [SerializeField] private float _touchSpeedSensitivityX = 1f;
         [SerializeField] private float _touchSpeedSensitivityY = 1f;
 
+        // WebGL / desktop: hold Right Mouse Button and drag to look around
+        [SerializeField] private float _mouseSpeedSensitivityX = 3f;
+        [SerializeField] private float _mouseSpeedSensitivityY = 1f;
+
         private Vector2 _lookInput;
         private string _touchXMapTo = "Mouse X";
         private string _touchYMapTo = "Mouse Y";
@@ -32,12 +36,25 @@ namespace SquidGame.LandScape
 
         private float GetInputAxis(string axisName)
         {
-            _lookInput = _touchInput.PlayerJoystickOutputVector();
-            if (axisName == _touchXMapTo)
-                return _lookInput.x * _touchSpeedSensitivityX;
+            // --- Touch-panel path (mobile / on-screen drag) ---
+            if (_touchInput != null)
+            {
+                _lookInput = _touchInput.PlayerJoystickOutputVector();
+                if (_lookInput.magnitude > 0.01f)
+                {
+                    if (axisName == _touchXMapTo) return _lookInput.x * _touchSpeedSensitivityX;
+                    if (axisName == _touchYMapTo) return _lookInput.y * _touchSpeedSensitivityY;
+                }
+            }
 
-            if (axisName == _touchYMapTo)
-                return _lookInput.y * _touchSpeedSensitivityY;
+#if !UNITY_ANDROID && !UNITY_IOS
+            // --- Mouse path (WebGL / desktop) ---
+            if (Input.GetMouseButton(1)) // right-mouse-button held
+            {
+                if (axisName == _touchXMapTo) return Input.GetAxis("Mouse X") * _mouseSpeedSensitivityX;
+                if (axisName == _touchYMapTo) return Input.GetAxis("Mouse Y") * _mouseSpeedSensitivityY;
+            }
+#endif
 
             return Input.GetAxis(axisName);
         }
